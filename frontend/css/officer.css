@@ -1,0 +1,266 @@
+﻿/* ==========================================================================
+   CashTrace AI — Law Enforcement Command Center Stylesheet (Dark Slate Executive)
+   ========================================================================== */
+
+:root {
+  --officer-navy: #0b0f19;
+  --officer-panel: #111827;
+  --officer-border: #1f2937;
+  --officer-border-glow: #38bdf8;
+  --officer-blue: #2563eb;
+  --officer-cyan: #38bdf8;
+  --officer-gold: #f59e0b;
+  --officer-red: #ef4444;
+  --officer-green: #10b981;
+}
+
+/* Master Layout Structure */
+.officer-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+  background: var(--officer-navy);
+}
+
+/* 1. Left Sidebar Navigation */
+.officer-sidebar {
+  background: var(--officer-panel);
+  border-right: 1px solid var(--officer-border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+}
+
+.sidebar-brand-box {
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--officer-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 14px 10px;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-item a:hover, .sidebar-item a.active {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--officer-cyan);
+  border-left: 3px solid var(--officer-cyan);
+}
+
+/* 2. Top Command Header Bar */
+.officer-header-bar {
+  background: var(--officer-panel);
+  border-bottom: 1px solid var(--officer-border);
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.officer-profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.officer-avatar-box {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--officer-blue), var(--officer-cyan));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.1rem;
+  border: 1px solid var(--officer-cyan);
+}
+
+.status-indicator-dot {
+  width: 8px; height: 8px;
+  background: var(--officer-green);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--officer-green);
+}
+
+/* 3. Statistic Cards Grid (8 Cards) */
+.stats-grid-8 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.stat-box {
+  background: var(--officer-panel);
+  border: 1px solid var(--officer-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.stat-box-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-box-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  font-family: var(--font-mono);
+  line-height: 1.2;
+}
+
+.stat-box-sub {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* 4. Filter & Search Controls */
+.filter-bar-box {
+  background: var(--officer-panel);
+  border: 1px solid var(--officer-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 5. Modern Data Table */
+.officer-table-wrap {
+  background: var(--officer-panel);
+  border: 1px solid var(--officer-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.officer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.officer-table th {
+  background: rgba(31, 41, 55, 0.8);
+  color: #94a3b8;
+  padding: 12px 14px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--officer-border);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+}
+
+.officer-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+}
+
+.officer-table tr:hover td {
+  background: rgba(56, 189, 248, 0.03);
+}
+
+/* Risk Badges */
+.badge-risk-high { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+.badge-risk-medium { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+.badge-risk-low { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+
+/* Status Badges */
+.badge-st-new { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+.badge-st-investigation { background: rgba(129, 140, 248, 0.15); color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.4); }
+.badge-st-solved { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); }
+.badge-st-pending { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+/* 6. Modal Dossier Dialogs */
+.modal-overlay-backdrop {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(14px);
+  z-index: 10000;
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay-backdrop.active { display: flex; }
+
+.modal-dossier-card {
+  background: #111827;
+  border: 1px solid var(--officer-border-glow);
+  border-radius: 16px;
+  max-width: 800px; width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
+  position: relative;
+}
+
+/* Timeline Activity */
+.activity-timeline {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  border-left: 2px solid var(--officer-border);
+  margin: 12px 0;
+}
+.activity-timeline-item {
+  position: relative;
+  margin-bottom: 14px;
+}
+.activity-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px; top: 3px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--officer-cyan);
+  box-shadow: 0 0 8px var(--officer-cyan);
+}
+
+@media (max-width: 1100px) {
+  .stats-grid-8 { grid-template-columns: repeat(2, 1fr); }
+  .officer-layout { grid-template-columns: 1fr; }
+  .officer-sidebar { display: none; }
+}

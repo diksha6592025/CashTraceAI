@@ -1,0 +1,18 @@
+# CashTrace AI — Python dependencies
+# Install: python -m pip install -r requirements.txt
+
+# Web application
+Flask==3.0.3
+Flask-Cors==4.0.1
+Werkzeug==3.0.3
+
+# Data / analytics environment
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+
+# CashTrace Intelligence / optional generative-AI grounding
+google-genai
+
+# HTTP / integration utility
+requests

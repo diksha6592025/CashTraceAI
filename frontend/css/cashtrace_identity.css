@@ -1,0 +1,15 @@
+/* ============================================================
+   CashTrace AI — Product Identity System
+   Original visual language: Financial Intelligence Operations
+   ============================================================ */
+:root{--ct-bg:#090c0d;--ct-panel:#111718;--ct-panel2:#171d1e;--ct-line:#2a3433;--ct-text:#f3f6f4;--ct-muted:#9aa7a2;--ct-mint:#72e6bd;--ct-mint2:#3fb88f;--ct-amber:#f3bd67}
+body{background:var(--ct-bg)!important;color:var(--ct-text);background-image:radial-gradient(circle at 12% 0%,rgba(114,230,189,.08),transparent 28%),radial-gradient(circle at 88% 18%,rgba(243,189,103,.06),transparent 25%)!important}
+.cyber-card,.card,.stat-card,.panel,.feature,.complaint-card,.pipeline-card,.privacy,.prediction-card{background:linear-gradient(145deg,rgba(17,23,24,.98),rgba(12,16,17,.98))!important;border-color:rgba(114,230,189,.16)!important;box-shadow:0 16px 42px rgba(0,0,0,.24)!important}
+.btn-primary,.primary-btn{background:var(--ct-mint2)!important;color:#06120e!important;border-color:var(--ct-mint2)!important}.btn-primary:hover,.primary-btn:hover{background:var(--ct-mint)!important}
+.btn-secondary,.secondary-btn{border-color:#394440!important;background:#151a1b!important;color:#dfe8e4!important}
+a{color:var(--ct-mint)}a:hover{color:#a5f3d7}
+input,select,textarea{background:#0d1112!important;border-color:#303a39!important;color:#f1f5f3!important}
+.badge,.status,.hero-badge{border-color:rgba(114,230,189,.32)!important;background:rgba(114,230,189,.08)!important;color:var(--ct-mint)!important}
+.sidebar-link:hover,.sidebar-link.active,.sidebar-item a:hover,.sidebar-item a.active{background:rgba(114,230,189,.09)!important;color:var(--ct-mint)!important;border-left-color:var(--ct-mint)!important}
+.officer-layout{background:#090c0d!important}.officer-sidebar,.officer-header-bar,.dashboard-sidebar{background:#101415!important;border-color:#283230!important}
+.officer-cyan,.officer-cyan *{color:var(--ct-mint)!important}.officer-avatar-box{background:linear-gradient(135deg,#174f40,#72e6bd)!important;border-color:var(--ct-mint)!important}.status-indicator-dot{background:var(--ct-mint)!important;box-shadow:0 0 8px rgba(114,230,189,.6)!important}.officer-gold{color:var(--ct-amber)!important}
