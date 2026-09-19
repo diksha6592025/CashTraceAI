@@ -1,5 +1,12 @@
 # CashTrace AI — Predictive Fund-Lineage & Cash-Out Intelligence System
 
+## 🚀 Live Prototype
+
+🌐 **Live Demo:** https://cashtraceai-1.onrender.com/
+
+> CashTrace AI is a prototype for predictive fund-lineage analysis,
+> risk assessment, and cash-out location forecasting.
+
 ## Project Overview
 CashTrace AI is an investigation-support prototype for SIH 2026 Problem Statement 26184. It connects a cybercrime case with authorized transaction records, probable fund-flow lineage, behavioral risk signals, cash-out forecasting, GIS context, explainable guidance, and investigator review.
 
